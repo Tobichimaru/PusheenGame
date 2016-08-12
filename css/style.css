@@ -1,0 +1,106 @@
+body {
+	background: #ffffa7;
+}
+
+.container {
+	width: 1264px;
+    height: 579px;
+    margin: auto;
+    color: #472e15;
+    font-family: Arial;
+}
+
+.left {
+	width: 75%;
+	height: 100%;
+	float: left;
+}
+.right {
+	width: 25%;
+	height: 100%;
+	display: inline-block;
+}
+
+.content {
+	background: #f8d3d7;
+	width: 100%;
+	height: 80%; 
+	border: 2px solid #472e15;
+	margin: -2px;
+	border-bottom: none;
+}
+
+.bottom-bar {
+	background: #9a7b55;
+	width: 100%;
+	height: 20%;
+	border: 2px solid #472e15;
+	margin: -2px;
+}
+
+.right-bar {
+	background: #6d5944;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #472e15;
+	margin: -2px;
+}
+
+.level-progress {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 60%;
+	height: 20%;
+	background: pink;
+}
+
+.circle {
+	width: 80px;
+	height: 80px;
+	background: #ffffa7;
+	border: #472e15 solid 3px;
+	border-radius: 50px;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+
+.circle img {
+	position: relative;
+	top: 8px;
+    left: 8px;
+}
+
+.cat-img {
+	margin-left: 25%;
+}
+
+.money {
+	height: 50%;
+}
+
+.money-img {
+	height: 100%;
+	float: left;
+	margin-left: 5px;
+}
+
+.money p {
+	color: yellow;
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.games {
+	height: 50%;
+}
+
+.games h3 {
+	font-size: 40px;
+    margin: 0px;
+    padding-top: 8px;
+    padding-left: 8px;
+}
