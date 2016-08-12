@@ -1,0 +1,66 @@
+#game {
+	width: 100%;
+	display: flex;
+}
+
+#game_field {
+	width: 70%;
+	height: 100%;
+	float: left;
+	margin: 0 auto;
+	background-color: #FFF0F5; 
+}
+
+#info_panel {
+	width: 28%;
+	margin: 0;
+	padding: 1%;
+	background-color: #FFDAB9;
+}
+
+#cat {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.flip_image {
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+#score {
+	font-size: 3em;
+	text-align: center;
+	margin: 0 auto;
+}
+
+label {
+	font-size: 2em;
+}
+ul {
+ 	list-style-type: none;
+}
+
+#likes li {
+	display: inline;
+}
+
+.hidden {
+	visibility: hidden; 
+}
+
+.happy-circle {
+	background-color: yellow;
+	width: 8vw;
+	height: 8vw;
+	left: 0;
+	bottom: 10vw;
+	border-radius: 100%;
+	position: absolute;
+	z-index: 1;
+}
