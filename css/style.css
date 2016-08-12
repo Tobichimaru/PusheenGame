@@ -2,12 +2,24 @@ body {
 	background: #ffffa7;
 }
 
+p,h3 {
+	cursor: default;
+}
+
 .container {
 	width: 1264px;
     height: 579px;
     margin: auto;
     color: #472e15;
     font-family: Arial;
+}
+
+.button {
+	cursor: pointer;
+	background: #ffffa7;
+	border: 2px solid #472e15;
+	border-radius: 7px;
+	text-align: center;
 }
 
 .left {
@@ -47,12 +59,10 @@ body {
 }
 
 .level-progress {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 60%;
-	height: 20%;
-	background: pink;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    height: 20%;
 }
 
 .circle {
@@ -73,7 +83,7 @@ body {
 }
 
 .cat-img {
-	margin-left: 25%;
+	margin: 0 0 0 25%;
 }
 
 .money {
@@ -83,7 +93,7 @@ body {
 .money-img {
 	height: 100%;
 	float: left;
-	margin-left: 5px;
+	margin: 0 0 0 5px;
 }
 
 .money p {
@@ -101,6 +111,51 @@ body {
 .games h3 {
 	font-size: 40px;
     margin: 0px;
-    padding-top: 8px;
-    padding-left: 8px;
+    padding: 8px 0 0 8px;
+    float: left;
 }
+
+.games .button {
+	width: 215px;
+    height: 35px;
+    display: inline-block;
+    font-size: 30px;
+    margin: 13px;
+}
+
+p.price:before {
+	content: "Price: ";
+}
+
+p.calories:before {
+	content: "Calories: ";
+}
+
+.right-bar .button {
+	width: 210px;
+    height: 56px;
+    margin: 10px 0 0 52px;
+}
+
+.right-bar .button p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.right-bar img {
+	float: left;
+	width: 55px;
+	padding: 0 0 0 7px;
+}
+
+.semicircle {
+    width: 33px;
+    height: 130px;
+    background: #ffffa7;
+    border: #472e15 solid 3px;
+    border-radius: 80px 0 0 80px;
+    margin: 75px 0 0 239px;
+}
+
