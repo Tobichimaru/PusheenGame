@@ -77,9 +77,39 @@ p,h3 {
 }
 
 .circle img {
-	position: relative;
-	top: 8px;
+    position: relative;
+    top: -35px;
     left: 8px;
+}
+
+.progress {
+    width: 225px;
+    height: 40px;
+    border-radius: 7px;
+    position: relative;
+	float: left;
+}
+
+.progress.background {
+    background-color: #eed295;
+    border: 3px solid #472e15;
+    top: 25px;
+    left: 74px;
+}
+
+.progress.percent {
+	background-color: #cca075;
+	position: relative;
+	width: 70%;
+	height: 100%;
+}
+
+.progress p {
+	position: absolute;
+    left: 80px;
+    font-size: 24px;
+    margin: 0;
+    top: 8px;
 }
 
 .cat-img {
