@@ -198,6 +198,7 @@ p.calories:before {
     margin: 0px;
     font-weight: bold;
     padding: 5px 0 0 0;
+    cursor: pointer;
 }
 
 .semicircle {
