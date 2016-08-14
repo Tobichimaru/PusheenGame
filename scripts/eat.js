@@ -12,6 +12,12 @@ $(function () {
 			}, 1500);
 			//progress
 		}
+		else {
+			$(".cat-img").attr("src","design/img/sadness.gif").attr("style", "margin: 64px 0 0 328px");
+			setTimeout(function () {
+				$(".cat-img").attr("src","design/img/pusheen.png").attr("style","");
+			}, 2000);
+		}
 	}
 
 	$(".meat").on("click", {food: "meat", attr: "margin: 66px 0 0 345px; width: 265px"} , feed);
