@@ -82,6 +82,39 @@ p,h3 {
     left: 8px;
 }
 
+.progress {
+    width: 225px;
+    height: 40px;
+    border-radius: 7px;
+    position: relative;
+	float: left;
+	text-align:center;
+	font-weight: bold;
+
+}
+
+.progress.background {
+    background-color: #eed295;
+    border: 3px solid #472e15;
+    top: 25px;
+    left: 74px;
+}
+
+.progress.percent {
+	background-color: #cca075;
+	position: relative;
+	height: 100%;
+}
+
+.progress p {
+	position: absolute;
+    left: 80px;
+    font-size: 24px;
+    margin: 0;
+    top: 8px;
+}
+
+
 .cat-img {
 	margin: 0 0 0 25%;
 }
