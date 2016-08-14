@@ -88,6 +88,12 @@ p,h3 {
     border-radius: 7px;
     position: relative;
 	float: left;
+<<<<<<< HEAD
+	text-align:center;
+	font-weight: bold;
+
+=======
+>>>>>>> origin/master
 }
 
 .progress.background {
@@ -100,7 +106,10 @@ p,h3 {
 .progress.percent {
 	background-color: #cca075;
 	position: relative;
+<<<<<<< HEAD
+=======
 	width: 70%;
+>>>>>>> origin/master
 	height: 100%;
 }
 
@@ -112,6 +121,10 @@ p,h3 {
     top: 8px;
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
 .cat-img {
 	margin: 0 0 0 25%;
 }
