@@ -8,7 +8,7 @@ $(function () {
 			$(".money p").text(+$money-(+$price));
 			$(".cat-img").attr("src","design/img/eat-" + event.data.food + ".gif").attr("style", event.data.attr);
 			setTimeout(function () {
-				$(".cat-img").attr("src","design/img/pusheen.png");
+				$(".cat-img").attr("src","design/img/pusheen.png").attr("style","");
 			}, 1500);
 			//progress
 		}
