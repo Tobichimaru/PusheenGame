@@ -11,6 +11,9 @@ $(function () {
 				$(".cat-img").attr("src","design/img/pusheen.png").attr("style","");
 			}, 1500);
 			//progress
+			var $progress = $(".now-progress").text();
+			$(".now-progress").text(+$progress + (+$calories));
+			$(".progress.percent").css("width", percentage($(".level-max").text(),$(".now-progress").text()))
 		}
 		else {
 			$(".cat-img").attr("src","design/img/sadness.gif").attr("style", "margin: 64px 0 0 328px");
@@ -18,6 +21,11 @@ $(function () {
 				$(".cat-img").attr("src","design/img/pusheen.png").attr("style","");
 			}, 2000);
 		}
+	}
+
+	function percentage(max, now) {
+		var p = (+now * 100) / +max;
+		return p + "%";
 	}
 
 	$(".meat").on("click", {food: "meat", attr: "margin: 66px 0 0 345px; width: 265px"} , feed);
