@@ -1,41 +1,32 @@
-$(function(){
-
-
-	var value = $('.progress.percent');
-	var maxValue = $('.progress.percent').width();
+$(function() {
+	var valueNumber = $('.now-progress').text();
+	var value = $('.progress.percent').width();
+	var valueMaxNumber = $('.level-max').text();
 	var difference = 1;
 	var img = $('.cat-img');
 	 
 	setInterval(function() {
 		
-		if (maxValue >= 0) {
-			maxValue -= difference;
-			value.width(maxValue);
-			$('.now-progress').text($('.now-progress').text() - difference); 
+		if (value >= 0) {
+			value -= value/valueNumber;
+			valueNumber -= difference;
 
-			if (maxValue <= $('.progress.percent').width()*0.6 && maxValue >= $('.progress.percent').width()*0.3){
-				$('.cat-img').attr("src", "design/img/sadness.png");
-			}
-			
-			if (maxValue < $('.progress.background').width()*0.3){
+			if (valueNumber == 0){
+				$('.cat-img').attr("src", "design/img/thumb.gif");
+				return;
+			} 
+
+			$('.progress.percent').width(value);
+			$('.now-progress').text(valueNumber); 	
+
+			if (valueNumber == valueMaxNumber*0.3) {
 				$('.cat-img').attr("src", "design/img/Anger.gif");
-			}
-			
-			if( maxValue == 0){
-			  // // alert("Your cat dead =(");
-			    swal({
-			    title: "Hei!",
-			    text: "What are you doing????",
-			    imageUrl: "design/img/thumb.gif"
-				  },
-		function(){
-		  location.reload();});
-
-				 }
-				}
-			}
-		, 2000);
-	
-	
-
+				return;
+			} 
+			if (valueNumber == valueMaxNumber*0.6) {
+				$('.cat-img').attr("src", "design/img/sadness.gif");
+				return;
+			}	
+		}
+	}, 300);
 });
