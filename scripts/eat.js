@@ -4,6 +4,7 @@ $(function () {
 		var $money = $(".money p").text();
 		var $price = $(".food." + event.data.food + " .price").text();
 		var $calories = $(".food." + event.data.food + " .calories").text();
+
 		if (+$money >= +$price) {
 			$(".money p").text(+$money-(+$price));
 			$(".cat-img").attr("src","design/img/eat-" + event.data.food + ".gif").attr("style", event.data.attr);
@@ -11,9 +12,7 @@ $(function () {
 				$(".cat-img").attr("src","design/img/pusheen.png").attr("style","");
 			}, 1500);
 			//progress
-			var $progress = $(".now-progress").text();
-			$(".now-progress").text(+$progress + (+$calories));
-			$(".progress.percent").css("width", percentage($(".level-max").text(),$(".now-progress").text()))
+			progress($calories);
 		}
 		else {
 			$(".cat-img").attr("src","design/img/sadness.gif").attr("style", "margin: 64px 0 0 328px");
@@ -26,6 +25,23 @@ $(function () {
 	function percentage(max, now) {
 		var p = (+now * 100) / +max;
 		return p + "%";
+	}
+
+	function progress(calories) {
+		var $progress = $(".now-progress").text();
+		var $newProgress = +$progress + (+calories);
+		if ($newProgress >= +$(".level-max").text()) {
+			$newProgress -= +$(".level-max").text();
+			//increase level
+			var $levelMax = $(".level-max").text();
+			$(".level-max").text(+$levelMax + 100); 
+			var $level = $(".level").text();
+			//$(".level").text(+$level++); 
+			//		
+		}
+
+		$(".now-progress").text(+$newProgress);
+		$(".progress.percent").css("width", percentage($(".level-max").text(),$(".now-progress").text()))
 	}
 
 	$(".meat").on("click", {food: "meat", attr: "margin: 66px 0 0 345px; width: 265px"} , feed);
