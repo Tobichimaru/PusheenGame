@@ -7,12 +7,12 @@ $(function() {
 		var value = $('.progress.percent').width();
 		var valueMaxNumber = $('.level-max').text();
 
-		if (value >= 0) {
+		if (valueNumber >= 0) {
 			value -= value/valueNumber;
 			valueNumber -= difference;
 
 			if (valueNumber == 0){
-				$('.cat-img').attr("src", "design/img/thumb.gif");
+				img.css("background-image", "url(design/img/thumb.gif)");  
 				return;
 			} 
 
@@ -20,11 +20,11 @@ $(function() {
 			$('.now-progress').text(valueNumber); 	
 
 			if (valueNumber == valueMaxNumber*0.3) {
-				$('.cat-img').attr("src", "design/img/Anger.gif");
+				img.css("background-image", "url(design/img/Anger.gif)");  
 				return;
 			} 
 			if (valueNumber == valueMaxNumber*0.6) {
-				$('.cat-img').attr("src", "design/img/sadness.gif");
+				img.css("background-image", "url(design/img/sadness.gif)");  
 				return;
 			}	
 		}
@@ -35,15 +35,16 @@ function changeCatImage() {
 	var valueNumber = $('.now-progress').text();
 	var valueMaxNumber = $('.level-max').text();
 	if (valueNumber == 0){
-		$('.cat-img').attr("src", "design/img/thumb.gif");
+		$('.cat-img').css("background-image", "url(design/img/thumb.gif)");  
 		return;
 	} 
 	if (valueNumber <= valueMaxNumber*0.3) {
-		$('.cat-img').attr("src", "design/img/Anger.gif");
+		$('.cat-img').css("background-image", "url(design/img/Anger.gif)");  
 		return;
 	} 
 	if (valueNumber <= valueMaxNumber*0.6) {
-		$('.cat-img').attr("src", "design/img/sadness.gif");
+		$('.cat-img').css("background-image", "url(design/img/sadness.gif)");  
 		return;
 	}	
+	$('.cat-img').css("background-image", "url(design/img/pusheen.gif)");  
 }
