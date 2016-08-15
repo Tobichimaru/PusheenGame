@@ -30,3 +30,20 @@ $(function() {
 		}
 	}, 300);
 });
+
+function changeCatImage() {
+	var valueNumber = $('.now-progress').text();
+	var valueMaxNumber = $('.level-max').text();
+	if (valueNumber == 0){
+		$('.cat-img').attr("src", "design/img/thumb.gif");
+		return;
+	} 
+	if (valueNumber <= valueMaxNumber*0.3) {
+		$('.cat-img').attr("src", "design/img/Anger.gif");
+		return;
+	} 
+	if (valueNumber <= valueMaxNumber*0.6) {
+		$('.cat-img').attr("src", "design/img/sadness.gif");
+		return;
+	}	
+}

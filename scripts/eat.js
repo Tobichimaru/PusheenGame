@@ -9,15 +9,7 @@ $(function () {
 			$(".money p").text(+$money-(+$price));
 			$(".cat-img").attr("src","design/img/eat-" + event.data.food + ".gif").attr("style", event.data.attr);
 			setTimeout(function () {
-				var valueNumber = +$('.now-progress').text();
-				var valueMaxNumber = $('.level-max').text();
-				if (valueNumber <= valueMaxNumber*0.3) {
-					$('.cat-img').attr("src", "design/img/Anger.gif");
-				} else if (valueNumber <= valueMaxNumber*0.6) {
-					$('.cat-img').attr("src", "design/img/sadness.gif");
-				} else {
-					$(".cat-img").attr("src","design/img/pusheen.png").attr("style","");
-				}		
+				changeCatImage();	
 			}, 1500);
 			//progress
 			progress($calories);
@@ -25,7 +17,7 @@ $(function () {
 		else {
 			$(".cat-img").attr("src","design/img/sadness.gif").attr("style", "margin: 64px 0 0 328px");
 			setTimeout(function () {
-				$(".cat-img").attr("src","design/img/pusheen.png").attr("style","");					
+				changeCatImage();				
 			}, 2000);
 		}
 	}
