@@ -2,7 +2,7 @@ $(function(){
 
 
 	var value = $('.progress.percent');
-	var maxValue = $('.progress').width();
+	var maxValue = $('.progress.percent').width();
 	var difference = 1;
 	var img = $('.cat-img');
 	 
@@ -11,8 +11,8 @@ $(function(){
 		if (maxValue >= 0) {
 			maxValue -= difference;
 			value.width(maxValue);
-			document.getElementById('progress').innerHTML = maxValue +"/"+ $('.progress.background').width();
-			
+			$('.now-progress').text($('.now-progress').text() - difference); 
+
 			if (maxValue <= $('.progress.percent').width()*0.6 && maxValue >= $('.progress.percent').width()*0.3){
 				$('.cat-img').attr("src", "design/img/sadness.png");
 			}
