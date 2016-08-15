@@ -115,6 +115,11 @@ p,h3 {
     top: 8px;
 }
 
+.level-progress h2 {
+	margin-left: 84px;
+    margin-top: -7px;
+}
+
 .cat-img {
 	margin: 0 0 0 25%;
 }
