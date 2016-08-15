@@ -1,12 +1,12 @@
 $(function() {
-	var valueNumber = $('.now-progress').text();
-	var value = $('.progress.percent').width();
-	var valueMaxNumber = $('.level-max').text();
 	var difference = 1;
 	var img = $('.cat-img');
 	 
 	setInterval(function() {
-		
+		var valueNumber = $('.now-progress').text();
+		var value = $('.progress.percent').width();
+		var valueMaxNumber = $('.level-max').text();
+
 		if (value >= 0) {
 			value -= value/valueNumber;
 			valueNumber -= difference;
