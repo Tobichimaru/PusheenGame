@@ -7,8 +7,8 @@ p,h3 {
 }
 
 .container {
-	width: 1264px;
-    height: 579px;
+	width: 1260px;
+    height: 580px;
     margin: auto;
     color: #472e15;
     font-family: Arial;
@@ -27,6 +27,7 @@ p,h3 {
 	height: 100%;
 	float: left;
 }
+
 .right {
 	width: 25%;
 	height: 100%;
@@ -88,12 +89,8 @@ p,h3 {
     border-radius: 7px;
     position: relative;
 	float: left;
-<<<<<<< HEAD
 	text-align:center;
 	font-weight: bold;
-
-=======
->>>>>>> origin/master
 }
 
 .progress.background {
@@ -106,10 +103,7 @@ p,h3 {
 .progress.percent {
 	background-color: #cca075;
 	position: relative;
-<<<<<<< HEAD
-=======
 	width: 70%;
->>>>>>> origin/master
 	height: 100%;
 }
 
@@ -121,12 +115,19 @@ p,h3 {
     top: 8px;
 }
 
-<<<<<<< HEAD
+.level-progress h2 {
+	margin-left: 84px;
+    margin-top: -7px;
+}
 
-=======
->>>>>>> origin/master
 .cat-img {
-	margin: 0 0 0 25%;
+	margin:auto;
+	width: 80%;
+	height: 80%;
+	background-image: url(img/pusheen.gif);
+	background-size: 40%;
+	background-repeat: no-repeat;
+    background-position: center; 
 }
 
 .money {
