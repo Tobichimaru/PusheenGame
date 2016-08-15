@@ -36,7 +36,7 @@ $(function () {
 			var $levelMax = $(".level-max").text();
 			$(".level-max").text(+$levelMax + 100); 
 			var $level = $(".level").text();
-			//$(".level").text(+$level++); 
+			$(".level").text(+$level + 1); 
 			//		
 		}
 
