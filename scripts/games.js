@@ -1,26 +1,37 @@
-// $(function () {
+$(function () {
 
 
-
-// 	function catchFoodGame() {
-// 		$(".container").css("background", "rgb(0,0,0)");
-// 	}
-// 	$(".catch-food").on("click", catchFoodGame());
-// });
-
-
-$(function(){
+   function changeBackground() {
    var docHeight = $(document).height();
    $("body").append("<div id='overlay'></div>");
    $("#overlay")
       .height(docHeight)
       .css({
-         'opacity' : 0.6,
-         'position': 'absolute',
+         'opacity' : 0.7,
+          'position': 'absolute',
          'top': 0,
          'left': 0,
          'background-color': 'black',
-         'width': '100%',
-         'z-index': 5000
-      });	
+         'width': '100%'
+      });  
+
+}; 
+
+   function catchGame () {
+      changeBackground();
+      // window.open("mini-games/Pusheen in space/index.html);
+      window.location.href = "mini-games/Pusheen in space/index.html"; // open in the same tab
+   }; 
+
+   function someGame () {
+      changeBackground();
+      window.open("mini-games/Pusheen Eats/index.html"); // open in new tab
+      // window.location.href = "mini-games/Pusheen Eats/index.html";
+   };
+
+
+	$(".catch-food").on("click", catchGame);
+   $(".some-game").on("click", someGame);
 });
+
+
