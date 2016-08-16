@@ -14,19 +14,20 @@ $(function () {
          'background-color': 'black',
          'width': '100%'
       });  
-
-}; 
+   }; 
 
    function catchGame () {
       changeBackground();
-      // window.open("mini-games/Pusheen in space/index.html);
-      window.location.href = "mini-games/Pusheen in space/index.html"; // open in the same tab
+      window.open("mini-games/Pusheen Eats/index.html"); // open in new tab
+      // window.location.href = "mini-games/Pusheen Eats/index.html";
+      
    }; 
 
    function someGame () {
       changeBackground();
-      window.open("mini-games/Pusheen Eats/index.html"); // open in new tab
-      // window.location.href = "mini-games/Pusheen Eats/index.html";
+      // window.open("mini-games/Pusheen in space/index.html);
+      window.location.href = "mini-games/Pusheen in space/index.html"; // open in the same tab
+
    };
 
 
