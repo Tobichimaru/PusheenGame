@@ -92,7 +92,7 @@ function IsWounded(name) {
 				document.getElementById("game_field").removeChild(spaceStone[name][i]);
 			spaceStone[name].splice(i, 1);
 			
-			if(name == "img/pill.png"){				
+			if(name == "img/like.png"){				
 				if(lives < 5){
 					lives++;
 					document.getElementById(lives).className = "visible";

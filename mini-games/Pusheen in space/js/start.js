@@ -22,8 +22,8 @@ function NewLevel() {
 		MoveItem("img/spaceship.png");
 	}
 	if (level == 4) {
-		CreateItem("img/pill.png");
-		MoveItem("img/pill.png");
+		CreateItem("img/like.png");
+		MoveItem("img/like.png");
 	}
 	if (level == 5 || level == 6) {
 		for (var item in generateSpeeds) {
