@@ -1,23 +1,26 @@
 var paused = false;
+var stepCount = 0;
 
 function KeyPressed(e) {
 	var unicode = e.keyCode ? e.keyCode : e.charCode;
 
 	var allowedSpace = parseInt(document.getElementById("game_field").offsetWidth,
 		10) - parseInt(document.getElementById("cat").offsetWidth, 10);
-	var step = allowedSpace / 3;
+	var step = allowedSpace / 4;
 
 	var position = parseInt(getComputedStyle(document.getElementById('cat')).left,
 		10);
 	var cat = document.getElementById('cat');
 
-	if (unicode == 37 && position > 0) {
+	if (unicode == 37 && stepCount > 0) {
 		cat.style["left"] = position - step;
+		stepCount--;
 		cat.className = "";
 	}
 
-	if (unicode == 39 && position < allowedSpace) {
+	if (unicode == 39 && stepCount < 4) {
 		cat.style["left"] = position + step;
+		stepCount++;
 		cat.className = "flip_image";
 	}
 }

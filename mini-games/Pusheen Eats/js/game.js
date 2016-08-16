@@ -1,3 +1,5 @@
+var stepCount = 0;
+
 function KeyPressed(e) {
 	var unicode = e.keyCode ? e.keyCode : e.charCode;
 
@@ -9,13 +11,15 @@ function KeyPressed(e) {
 		10);
 	var cat = document.getElementById('cat');
 
-	if (unicode == 37 && position > 0) {
+	if (unicode == 37 && stepCount > 0) {
 		cat.style["left"] = position - step;
+		stepCount--;
 		cat.className = "";
 	}
 
-	if (unicode == 39 && position < allowedSpace) {
+	if (unicode == 39 && stepCount < 3) {
 		cat.style["left"] = position + step;
+		stepCount++;
 		cat.className = "flip_image";
 	}
 }
