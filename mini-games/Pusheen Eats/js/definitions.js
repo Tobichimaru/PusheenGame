@@ -9,7 +9,8 @@ var generateSpeeds = {
 	"img/cupcake.png": 4750,
 	"img/doughnut.png": 5000,
 	"img/meat.png": 5250,
-	"img/pizza.png": 5500
+	"img/pizza.png": 5500,
+	"img/like.png": 10000
 };
 
 var moveSpeeds = {
@@ -17,7 +18,8 @@ var moveSpeeds = {
 	"img/cupcake.png": 200,
 	"img/doughnut.png": 150,
 	"img/meat.png": 100,
-	"img/pizza.png": 50
+	"img/pizza.png": 50,
+	"img/like.png": 50
 };
 
 var itemsScores = {
@@ -25,7 +27,8 @@ var itemsScores = {
 	"img/cupcake.png": 15,
 	"img/doughnut.png": 20,
 	"img/meat.png": 25,
-	"img/pizza.png": 30
+	"img/pizza.png": 30,
+	"img/like.png": 50,
 };
 
 var food = {
@@ -33,5 +36,6 @@ var food = {
 	"img/cupcake.png": [],
 	"img/doughnut.png": [],
 	"img/meat.png": [],
-	"img/pizza.png": []
+	"img/pizza.png": [],
+	"img/like.png": []
 };
