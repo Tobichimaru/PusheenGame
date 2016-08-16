@@ -32,7 +32,6 @@ $(function () {
 		var $progress = $(".now-progress").text();
 		var $newProgress = +$progress + (+calories);
 		if ($newProgress >= +$(".level-max").text()) {
-			$newProgress -= +$(".level-max").text();
 			//increase level
 			var $levelMax = $(".level-max").text();
 			$(".level-max").text(+$levelMax + 100); 
