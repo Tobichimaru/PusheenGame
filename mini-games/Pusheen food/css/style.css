@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    animation: theme 21s linear infinite;
+}
+body:after, body:before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.05);
+    animation: background 90s linear infinite;
+}
+body:after {
+    left: 15vw;
+}
+body:before {
+    right: 15vw;
+    animation-delay: -30s;
+    animation-direction: reverse;
+}
+
+.picture {
+    width: 150px;
+    margin: 30px 30px 25px 30px;
+    position: absolute;
+    cursor: pointer;
+    opacity:0.8;
+}
+
+img[id^=right] {
+    right: 7%;
+}
+img[id^=left] {
+    left: 7%;
+}
+
+#right-bottom-img {
+    position: absolute;
+    bottom: 20px;
+}
+
+#left-bottom-img {
+    position: absolute;
+    bottom: 20px;
+}
+
+.health {
+    width: 14%;
+    right: 43%;
+    top: 15px;
+    position: absolute;
+    text-align: center;
+}
+.health div{
+    height: 45px;
+}
+
+#imgLife {
+    margin: 0 2%;
+    width: 25%;
+}
+
+#image-food {
+    width: 20%;
+    height: 30%;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    text-align: center;
+}
+
+#image-food img {
+    display: none;
+    width: 180px;
+}
+
+#image-food:before {
+    content:" ";
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+
+#image-food p, #image-food h1{
+    display: inline-block;
+}
+
+.score-text {
+    right: 34%;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@keyframes theme {
+    0% {
+        background: rgba(116, 195, 144, 0.47);
+    }
+    16% {
+        background: rgba(93, 189, 182, 0.36);
+    }
+    33% {
+        background: rgba(89, 212, 225, 0.38);
+    }
+    50% {
+        background: rgba(81, 188, 232, 0.39);
+    }
+    66% {
+        background: rgba(250, 83, 116, 0.31);
+    }
+    83% {
+        background: rgba(228, 102, 83, 0.43);
+    }
+    100% {
+        background: rgba(116, 195, 144, 0.43);
+    }
+}
+
+
+@keyframes background {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media all and (min-width: 750px) {
+    body {
+        min-width: 450px;
+        max-height:540px;
+    }
+
+    .picture {
+        min-width: 190px;
+        min-height:190px;
+    }
+
+}
