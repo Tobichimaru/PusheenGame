@@ -1,5 +1,5 @@
 body{
-	background:black;
+	background-image: url(back.jpg)
 }
 #game {
 	width: 100%;
@@ -19,7 +19,7 @@ body{
 	margin: 0;
 	padding: 1%;
 	background-color: #191970;
-	box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+	box-shadow: inset 30px 20px 200px black;
 	color:gold;
 }
 
