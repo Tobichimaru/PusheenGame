@@ -7,8 +7,8 @@ p,h3 {
 }
 
 .container {
-	width: 1264px;
-    height: 579px;
+	width: 1260px;
+    height: 580px;
     margin: auto;
     color: #472e15;
     font-family: Arial;
@@ -27,6 +27,7 @@ p,h3 {
 	height: 100%;
 	float: left;
 }
+
 .right {
 	width: 25%;
 	height: 100%;
@@ -76,10 +77,17 @@ p,h3 {
 	left: 5px;
 }
 
-.circle img {
-	position: relative;
-	top: 8px;
+.circle div {
+    position: relative;
+    top: 7px;
     left: 8px;
+}
+
+.circle-img{
+	background: url('../design/img/icons.png');
+	background-position:-8px -132px;
+	width:64px;
+	height:64px;
 }
 
 .progress {
@@ -90,7 +98,6 @@ p,h3 {
 	float: left;
 	text-align:center;
 	font-weight: bold;
-
 }
 
 .progress.background {
@@ -103,6 +110,7 @@ p,h3 {
 .progress.percent {
 	background-color: #cca075;
 	position: relative;
+	width: 70%;
 	height: 100%;
 }
 
@@ -114,9 +122,19 @@ p,h3 {
     top: 8px;
 }
 
+.level-progress h2 {
+	margin-left: 84px;
+    margin-top: -7px;
+}
 
 .cat-img {
-	margin: 0 0 0 25%;
+	margin:auto;
+	width: 80%;
+	height: 80%;
+	background-image: url(img/pusheen.gif);
+	background-size: 40%;
+	background-repeat: no-repeat;
+    background-position: center; 
 }
 
 .money {
@@ -124,6 +142,10 @@ p,h3 {
 }
 
 .money-img {
+	background:url('../design/img/icons.png');
+	background-repeat:no-repeat;
+	background-position:-71px -5px;
+	width:60px;
 	height: 100%;
 	float: left;
 	margin: 0 0 0 5px;
@@ -164,31 +186,79 @@ p.calories:before {
 	content: "Calories: ";
 }
 
-.right-bar .button {
+.right-bar .button.food {
 	width: 210px;
-    height: 56px;
+    height: 64px;
     margin: 10px 0 0 52px;
 }
 
-.right-bar .button p {
+.right-bar .button.food p {
     font-size: 20px;
     font-weight: bold;
     margin: 3px 0px 0px 0px;
     cursor: pointer;
 }
 
-.right-bar img {
+.right-bar div {
+	background-repeat:no-repeat;
 	float: left;
-	width: 55px;
+	width: 60px;
+	height:100%;
 	padding: 0 0 0 7px;
 }
 
+.meat-img{
+	background: url('../design/img/icons.png');
+	background-position:-8px -204px;
+}
+
+.pizza-img{
+	background: url('../design/img/icons.png');
+	background-position:-6px -284px;
+}
+	
+.hamburguer-img{
+	background: url('../design/img/icons.png');
+	background-position:-8px -132px;
+}	
+
+.donut-img{
+	background: url('../design/img/icons.png');
+	background-position:-8px -70px;
+}
+
+.cupcake-img{
+	background: url('../design/img/icons.png');
+}
+
+.game-menu .button {
+    width: 132px;
+    height: 27px;
+    float: left;
+}
+
+.game-menu .load {
+	margin: 10px 0 0 120px;
+}
+
+.game-menu .save {
+    margin: 30px 0 0 120px;
+}
+
+.game-menu p {
+    margin: 0px;
+    font-weight: bold;
+    padding: 5px 0 0 0;
+    cursor: pointer;
+}
+
 .semicircle {
-    width: 33px;
+    width: 73px;
     height: 130px;
     background: #ffffa7;
     border: #472e15 solid 3px;
     border-radius: 80px 0 0 80px;
     margin: 75px 0 0 239px;
+    position: relative;
 }
 

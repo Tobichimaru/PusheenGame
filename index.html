@@ -2,38 +2,43 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 	<title>Pusheen</title>
 	<link href="css/style.css" rel="stylesheet">
 
-	<script src="scripts/jquery-3.1.0.js"></script>
-	<script src="scripts/eat.js"></script>
-	<link href="css/sweetalert.css" rel="stylesheet">
-	<script src="js/sweetalert.min.js" type="text/javascript"></script>
-	<script src="js/health-bar.js" type="text/javascript"></script>
-	<script src="scripts/jquery-3.1.0.js"></script>
-	<script src="scripts/eat.js"></script>
+	<script type="text/javascript" src="scripts/jquery-3.1.0.js" ></script>
+	<script type="text/javascript" src="scripts/variables.js"></script>
+	<script type="text/javascript" src="scripts/health-bar.js"></script>
+	<script type="text/javascript" src="scripts/eat.js"></script>
+	<script type="text/javascript" src="scripts/games.js"></script>
+
+	
+
 </head>
 <body>
 <div class="container">
 	<div class="left">
 		<div class="content">
-
-			<div class="level-progress">				
-				<div class="progress background" >
-					<div class="progress percent" id="progress"></div>
-					<!-- <p><span class="now-progress">70</span>/<span class="level-max">100</span></p> -->
+			<div class="level-progress">	
+				<div class="progress background">
+					<div class="progress percent"></div>
+					<p>
+						<span class="now-progress"></span>
+						/
+						<span class="level-max"></span>
+					</p>
 				</div>
 				<div class="circle">
-					<img src="design/img/hamburguer (64x64).png"/>
+					<div class="circle-img"></div>
 				</div>
+				<h2>Level: <span class="level"></span></h2>
 			</div>
-			<img src="design/img/pusheen.png" class="cat-img"/>
-
+			<div class="cat-img"></div>
 		</div>
 		<div class="bottom-bar">
 			<div class="money">
-				<img src="design/img/money.png" class="money-img" />
-				<p>1000</p>
+				<div class="money-img"></div>
+				<p class="totalMoney"></p>
 			</div>
 			<div class="games">
 				<h3>Mini Games: </h3>
@@ -45,27 +50,27 @@
 	<div class="right">
 		<div class="right-bar">
 			<div class="button food meat">
-				<img src="design/img/meat.png" class="meat-img"/>
+				<div class="meat-img"></div>
 				<p class="price">100</p>
 				<p class="calories">10</p>
 			</div>
 			<div class="button food pizza">
-				<img src="design/img/pizza.png" class="pizza-img"/>
+				<div class="pizza-img"></div>
 				<p class="price">80</p>
 				<p class="calories">8</p>
 			</div>
 			<div class="button food hamburguer">
-				<img src="design/img/hamburguer (64x64).png" class="hamburguer-img"/>
+				<div class="hamburguer-img"></div>
 				<p class="price">60</p>
 				<p class="calories">6</p>
 			</div>
 			<div class="button food donut">
-				<img src="design/img/doughnut.png" class="donut-img"/>
+				<div class="donut-img"></div>
 				<p class="price">40</p>
 				<p class="calories">4</p>
 			</div>
 			<div class="button food cupcake">
-				<img src="design/img/cupcake.png" class="cupcake-img"/>
+				<div class="cupcake-img"></div>
 				<p class="price">20</p>
 				<p class="calories">2</p>
 			</div>
@@ -79,5 +84,6 @@
 		</div>
 	</div>
 </div>
+
 </body>
 </html>

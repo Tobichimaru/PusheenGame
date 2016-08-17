@@ -1,8 +1,17 @@
-var paused = false;
+var isPaused = true;
+var click = 0;
 var stepCount = 0;
 
 function KeyPressed(e) {
 	var unicode = e.keyCode ? e.keyCode : e.charCode;
+
+	isPaused = false;
+	click++;
+	if (click == 1) {
+		start();
+		$("body").removeClass("before-game");
+		$("p").remove();
+	}
 
 	var allowedSpace = parseInt(document.getElementById("game_field").offsetWidth,
 		10) - parseInt(document.getElementById("cat").offsetWidth, 10);
@@ -26,6 +35,10 @@ function KeyPressed(e) {
 }
 
 function CreateItem(name) {
+	if(isPaused==true)
+	{
+		return;
+	}
 	var width = document.getElementById("game_field").offsetWidth;
 	var item = document.createElement("img");
 
@@ -93,7 +106,7 @@ function IsWounded(name) {
 			spaceStone[name].splice(i, 1);
 			
 			if(name == "img/like.png"){				
-				if(lives < 5){
+				if(lives < 3){
 					lives++;
 					document.getElementById(lives).className = "visible";
 				}
