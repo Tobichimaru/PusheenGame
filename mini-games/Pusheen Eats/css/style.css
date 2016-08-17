@@ -54,6 +54,10 @@ ul {
 	visibility: hidden; 
 }
 
+.visible{
+	visibility: visible;
+}
+
 .happy-circle {
 	background-color: yellow;
 	width: 8vw;

@@ -28,6 +28,8 @@ function NewLevel() {
 		MoveItem("img/pizza.png");
 	}
 	if (level == 6 || level == 7) {
+		CreateItem("img/like.png");
+		MoveItem("img/like.png");
 		for (var item in generateSpeeds) {
 			item -= 500;
 		}
