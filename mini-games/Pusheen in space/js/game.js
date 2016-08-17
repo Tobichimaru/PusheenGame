@@ -9,6 +9,8 @@ function KeyPressed(e) {
 	click++;
 	if (click == 1) {
 		start();
+		$("body").removeClass("before-game");
+		$("p").remove();
 	}
 
 	var allowedSpace = parseInt(document.getElementById("game_field").offsetWidth,
