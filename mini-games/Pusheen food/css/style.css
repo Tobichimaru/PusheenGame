@@ -74,6 +74,7 @@ img[id^=left] {
     top: 35%;
     left: 40%;
     text-align: center;
+    font-size: 19px;
 }
 
 #image-food img {
