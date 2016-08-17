@@ -9,7 +9,7 @@ var generateSpeeds = {
 	"img/comet.png": 1700,
 	"img/asteroid.png": 2000,
 	"img/spaceship.png": 2000,
-	"img/pill.png": 7000,
+	"img/like.png": 7000,
 };
 
 var moveSpeeds = {
@@ -17,7 +17,7 @@ var moveSpeeds = {
 	"img/comet.png": 100,
 	"img/asteroid.png": 100,
 	"img/spaceship.png": 100,
-	"img/pill.png": 50,
+	"img/like.png": 50,
 };
 
 var itemsScores = {
@@ -25,7 +25,7 @@ var itemsScores = {
 	"img/comet.png": 15,
 	"img/asteroid.png": 20,
 	"img/spaceship.png": 20,
-	"img/pill.png": 50,
+	"img/like.png": 50,
 };
 
 var spaceStone = {
@@ -33,5 +33,5 @@ var spaceStone = {
 	"img/comet.png": [],
 	"img/asteroid.png": [],
 	"img/spaceship.png": [],
-	"img/pill.png": [],
+	"img/like.png": [],
 };
