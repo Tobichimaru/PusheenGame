@@ -1,6 +1,7 @@
 body{
-	background-image: url(back.jpg)
+	background-image: url(../img/back.jpg);
 }
+
 #game {
 	width: 100%;
 	display: flex;
@@ -11,7 +12,6 @@ body{
 	height: 90%;
 	float: left;
 	margin: 0 auto;
-	background-image: url(back.jpg)
 }
 
 #info_panel {
@@ -28,6 +28,32 @@ body{
 	left: 0;
 	bottom: 0;
 }
+
+.before-game {
+	background-image: url(../img/opacity-back.jpg);
+	opacity: 0.2;
+}
+
+.start-text {
+	opacity:1;
+	margin: 20% 10% 0 10%;
+	text-align:center;
+	color:white;
+	font-size: 3.5em;
+	 animation: blink 2s linear infinite;
+}
+
+@-webkit-keyframes blink {
+  50% { color: white }
+  51% { color: grey; }
+  100% { color: white; }
+}
+@keyframes blink {
+   50% { color: white }
+  51% { color: grey; }
+  100% { color: white; }
+}
+
 
 .flip_image {
 	-moz-transform: scaleX(-1);
@@ -82,6 +108,7 @@ h1, h2{
 	text-align:center;
 	text-transform: uppercase; 
 }
+
 
 ul li{
 	display:inline;
