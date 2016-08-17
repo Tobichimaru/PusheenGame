@@ -1,4 +1,3 @@
-
 var info = {
 	'money': 1000,
 	'level': 1,
