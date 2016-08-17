@@ -22,19 +22,21 @@ $(function() {
 
             score = 0;
             countLife = $('.health div > img').length;
-            clickedCat = "meatcat";
+            clickedCat = undefined;
             show = false;
         },
+
         start: function (timer) {
             time = timer || timeOut;
             speed = setTimeout(game.randomFood, time);
         },
+
         stop: function () {
             clearTimeout(speed);
         },
+
         randomFood: function () {
             if (countLife > 0) {
-                $('.picture').animate({"opacity":"0.8"},300);
                 game.start(timeOut);
                 numberImg = random(0, 6);
                 $('#image-food').html('<img src="' + food[numberImg] + ' ">').find("img").stop().fadeIn(200);
@@ -42,30 +44,38 @@ $(function() {
                     timeOut -= timeOutStep;
                 }
 
-                //if(show && !game.checkClicked()) {
-                    //game.lostLife();
-                //}
+                if (show && !game.checkClicked()) {
+                    game.lostLife();
+                }
+                $('.picture').css({"opacity":"0.8"});
                 show = true;
             }
         },
+
         checkClicked: function() {
+            var clicked = false;
             $('.picture').each(function(){
                 if ($(this).css('opacity') == 1) {
-                    return true;
+                    clicked =  true;
                 }
             });
-            return false;
+            return clicked;
         },
+
         lostLife: function () {
-            var sad_melody = new Audio('sound/game-over.mp3');
+            var sad_melody = new Audio('sound/Kitten Meow.mp3');
+            var crash_life = new Audio('sound/crash-health.mp3');
+
             $('.health img:last').remove();
             countLife--;
-
             if (countLife == 0) {
                 game.stop();
                 $('#image-food').html('<h1>Game over</h1><br><img src="images/imgs/deadcat.png" style="display: initial; margin-top: -35%; width: 140px;">');
+                sad_melody.play();
             }
-            //sad_melody.play();
+            else {
+                crash_life.play();
+            }
         }
     };
 
@@ -73,11 +83,11 @@ $(function() {
     game.start();
 
     $('.picture').click(function() {
-        //if(!game.checkClicked()) {
+        if(!game.checkClicked()) {
             var audio_good = new Audio('sound/good.mp3');
             var isContain = false;
             var $this = $(this);
-            $this.animate({"opacity": "1"}, 300);
+            $this.css({"opacity": "1"});
             clickedCat = $this.attr("alt");
 
             for (var img = 0; img < user_food[clickedCat].length; img++) {
@@ -96,8 +106,10 @@ $(function() {
                 game.lostLife();
                 return false;
             }
-        //}
-        clickedCat = undefined;
+
+            clickedCat = undefined;
+        }
+
     });
 
 });
