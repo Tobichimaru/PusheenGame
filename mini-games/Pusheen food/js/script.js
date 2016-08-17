@@ -117,7 +117,8 @@ game = {
 
         if (countLife == 0) {
             game.stop();
-            $('#image-food').html('<h1>Game over</h1><br><img src="images/imgs/deadcat.png" style="display: initial; margin-top: -35%; width: 140px;">');
+            numberImg = undefined;
+            $('#image-food').html('<h1>Game over</h1><br><img src="images/imgs/deadcat.png" id="dead-cat">');
             sad_melody.play();
         }
         else {
