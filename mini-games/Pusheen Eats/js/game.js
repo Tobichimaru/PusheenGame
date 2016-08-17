@@ -53,8 +53,11 @@ function MoveItem(name) {
 		if (position + 64 > heigth) {
 			document.getElementById("game_field").removeChild(food[name][i]);
 			food[name].splice(i, 1);
-			document.getElementById(lives).className = "hidden";
-			lives--;
+			if(name!="img/like.png") {
+				document.getElementById(lives).className = "hidden";
+				lives--;
+			}
+
 			if (lives == 0) {
 				if (!alert('Game over!')) {
 					window.location.reload();
@@ -83,7 +86,7 @@ function IsEaten(name) {
 		var catWidth = document.getElementById("cat").clientWidth;
 
 		if (positionTop > heigth - catHeight && positionLeft - positionCatLeft <
-			catWidth && positionLeft > positionCatLeft) {
+			catWidth && positionLeft > positionCatLeft) {						
 			score += itemsScores[name];
 			document.getElementById('score').innerHTML = score;
 			document.getElementById("game_field").removeChild(food[name][i]);
@@ -95,6 +98,12 @@ function IsEaten(name) {
 			item.style.opacity = 0.5;
 			document.getElementById("game_field").appendChild(item);
 			FadeAway(item);
+			if(name == "img/like.png"){				
+				if(lives < 3){
+					lives++;
+					document.getElementById(lives).className = "visible";
+				}
+			}
 		}
 	}
 }
