@@ -74,6 +74,7 @@ img[id^=left] {
     top: 35%;
     left: 40%;
     text-align: center;
+    font-size: 19px;
 }
 
 #image-food img {
@@ -97,6 +98,12 @@ img[id^=left] {
     font-size: 24px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+#dead-cat {
+    display: initial !important;
+    margin-top: -35%;
+    width: 140px;
 }
 
 @keyframes theme {
