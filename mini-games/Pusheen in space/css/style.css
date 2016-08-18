@@ -126,7 +126,7 @@ ul li{
 	
 }
 
-.button{
+.play, .stop{
 	cursor: pointer;
 }
 

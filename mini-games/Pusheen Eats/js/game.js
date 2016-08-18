@@ -13,13 +13,22 @@ function unpause() {
 function KeyPressed(e) {
 	var unicode = e.keyCode ? e.keyCode : e.charCode;
 
-	if(unicode == 39)
-	click++;
-	if (click == 1) {
-		isPaused = false;
-		start();
-		$("body").removeClass("before-game");
-		$("p").remove();
+	if(unicode == 39){
+		click++;
+		if (click == 1) {
+			isPaused = false;
+			start();
+			$("body").removeClass("before-game");
+			$("p").remove();
+		}
+	}
+	
+	if(unicode == 38){
+		 audioElement.play();
+	}
+	
+	if(unicode == 40){
+		 audioElement.pause();
 	}
 	
 	var allowedSpace = parseInt(document.getElementById("game_field").offsetWidth,

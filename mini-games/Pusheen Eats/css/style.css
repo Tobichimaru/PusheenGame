@@ -107,7 +107,7 @@ h1 {
 	text-align: center;
 }
 
-.button{
+.play, .stop{
 	cursor: pointer;
 }
 
