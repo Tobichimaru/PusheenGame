@@ -71,14 +71,16 @@ img[id^=left] {
     width: 20%;
     height: 30%;
     position: absolute;
-    top: 35%;
+    top: 34%;
     left: 40%;
     text-align: center;
+    font-size: 19px;
 }
 
 #image-food img {
     display: none;
     width: 180px;
+
 }
 
 #image-food:before {
@@ -97,6 +99,27 @@ img[id^=left] {
     font-size: 24px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+#dead-cat {
+    display: initial !important;
+    margin-top: -35%;
+    width: 140px;
+}
+
+#game-over {
+    display:none;
+}
+
+.play-pause {
+    position: absolute;
+    top:88%;
+    left:48%;
+}
+
+.play-pause img{
+    width:50px;
+    height:50px;
 }
 
 @keyframes theme {

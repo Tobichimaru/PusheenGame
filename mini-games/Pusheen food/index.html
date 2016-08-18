@@ -8,7 +8,8 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-    <div class="main">
+
+<div class="main">
         <img id="left-top-img" class="picture" src="images/imgs/burger_pusheen.png" alt="burgerCat">
         <img id="right-top-img" class="picture right-picture " src="images/imgs/cake.png" alt="cakeCat">
         <img id="right-bottom-img" class="picture" src="images/imgs/meat_pusheen.png" alt="meatCat">
@@ -26,8 +27,16 @@
 
 
     <div id="image-food">
-        <p>Игра начнется через 3 секунды</p>
+        <p>Игра начнется через <span id="seconds">3</span> секунды</p>
+        <img id="food"/>
+        <span id="game-over">
+            <h1>Game over</h1><br><img src="images/imgs/deadcat.png" id="dead-cat"/>
+        </span>
     </div>
+
+        <div class="play-pause">
+            <img />
+        </div>
 
     </div>
 </body>
