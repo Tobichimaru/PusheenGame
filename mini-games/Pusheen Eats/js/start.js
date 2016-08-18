@@ -2,7 +2,9 @@ window.onload = start;
 document.addEventListener("keydown", KeyPressed, false);
 
 function start() {
-	NewLevel();
+	if(isPaused==false){
+		NewLevel();
+	}
 }
 
 function NewLevel() {

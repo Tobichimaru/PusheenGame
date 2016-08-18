@@ -81,6 +81,10 @@ ul {
  	list-style-type: none;
 }
 
+#likes{
+	margin-left: 12%;
+}
+
 #likes li {
 	display: inline;
 }
@@ -116,4 +120,22 @@ ul li{
 
 .info-life{
 	padding-left:40%;
+}
+
+.play, .pause{
+	
+}
+
+.button{
+	cursor: pointer;
+}
+
+.music{
+	float:left;
+	width:50%;
+	border: 1px solid gold
+}
+
+.button-panel{
+	overflow:hidden;
 }

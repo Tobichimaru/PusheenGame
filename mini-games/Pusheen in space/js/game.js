@@ -2,12 +2,21 @@ var isPaused = true;
 var click = 0;
 var stepCount = 0;
 
+function pause() {
+	isPaused = true;
+}
+
+function unpause() {
+	isPaused = false;
+}
+
 function KeyPressed(e) {
 	var unicode = e.keyCode ? e.keyCode : e.charCode;
 
-	isPaused = false;
+	if(unicode == 39)
 	click++;
 	if (click == 1) {
+		isPaused = false;
 		start();
 		$("body").removeClass("before-game");
 		$("p").remove();
@@ -35,8 +44,7 @@ function KeyPressed(e) {
 }
 
 function CreateItem(name) {
-	if(isPaused==true)
-	{
+	if(isPaused==true){
 		return;
 	}
 	var width = document.getElementById("game_field").offsetWidth;
@@ -55,6 +63,9 @@ function CreateItem(name) {
 }
 
 function MoveItem(name) {
+	if(isPaused){
+		return;
+	}
 	var length = spaceStone[name].length;
 	var heigth = document.getElementById("game_field").offsetHeight;
 	var positionCatLeft = parseInt(document.getElementById("cat").style.left, 10);
@@ -136,3 +147,4 @@ function FadeAway(item) {
 		}, fade);
 	}
 }
+

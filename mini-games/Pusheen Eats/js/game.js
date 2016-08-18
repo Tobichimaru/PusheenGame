@@ -1,8 +1,27 @@
 var stepCount = 0;
+var isPaused = true;
+var click = 0;
+
+function pause() {
+	isPaused = true;
+}
+
+function unpause() {
+	isPaused = false;
+}
 
 function KeyPressed(e) {
 	var unicode = e.keyCode ? e.keyCode : e.charCode;
 
+	if(unicode == 39)
+	click++;
+	if (click == 1) {
+		isPaused = false;
+		start();
+		$("body").removeClass("before-game");
+		$("p").remove();
+	}
+	
 	var allowedSpace = parseInt(document.getElementById("game_field").offsetWidth,
 		10) - parseInt(document.getElementById("cat").offsetWidth, 10);
 	var step = allowedSpace / 3;
@@ -25,6 +44,9 @@ function KeyPressed(e) {
 }
 
 function CreateItem(name) {
+		if(isPaused==true){
+		return;
+	}
 	var width = document.getElementById("game_field").offsetWidth;
 	var item = document.createElement("img");
 
@@ -41,6 +63,9 @@ function CreateItem(name) {
 }
 
 function MoveItem(name) {
+	if(isPaused){
+		return;
+	}
 	var length = food[name].length;
 	var heigth = document.getElementById("game_field").offsetHeight;
 
