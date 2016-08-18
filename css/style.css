@@ -252,13 +252,12 @@ p.calories:before {
     cursor: pointer;
 }
 
-.semicircle {
-    width: 73px;
+.right-bar .semicircle {
     height: 130px;
     background: #ffffa7;
     border: #472e15 solid 3px;
     border-radius: 80px 0 0 80px;
-    margin: 75px 0 0 239px;
+    margin: -100px 0 0 239px;
     position: relative;
 }
 
