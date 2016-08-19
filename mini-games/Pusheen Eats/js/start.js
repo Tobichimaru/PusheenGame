@@ -1,8 +1,30 @@
 window.onload = start;
 document.addEventListener("keydown", KeyPressed, false);
 
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('src', 'mr-sandman.mp3');
+
+$(document).ready(function() {
+        $.get();
+
+        audioElement.addEventListener("load", function() {
+            audioElement.play();
+        }, true);
+
+        $('.play').click(function() {
+            audioElement.play();
+        });
+		
+
+        $('.stop').click(function() {
+            audioElement.pause();
+        });
+    });
+
 function start() {
-	NewLevel();
+	if(isPaused==false){
+		NewLevel();
+	}
 }
 
 function NewLevel() {
