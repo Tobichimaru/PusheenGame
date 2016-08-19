@@ -10,9 +10,16 @@ $(function() {
         if (i==1) {
             clearInterval(secondsGame);
         }
-
         i--;
+
     }, 1000);
+
+    setTimeout(function () {
+        text_game.hide();
+        playPause.attr({"src":"images/imgs/pause.png"});
+    },timeOut);
+
+    playPause.on('click', game.changeStatusGame);
 
     $('.picture').click(function() {
         if(!game.checkClicked()) {
@@ -48,12 +55,19 @@ $(function() {
 
 game = {
     settings: function (_timeOut, _timeOutStep) {
-        timeOut = _timeOut || 3000;
-        timeOutStep = _timeOutStep || 30;
+        timeOut = _timeOut || 3000;  //the time through which there is a new picture
+        timeOutStep = _timeOutStep || 30;  //the step for decreasing time for showing the picture with food
+        score = 0;  //the counter points of the game
+        countLife = $('.health div > img').length;  //amount of all lives
+        image_food = $('#food');
+        playPause = $('.play-pause img'); //selector for setting play/pause in game
+        text_game =  $('#image-food p');
+        show = false;
+        imgPause = true;
 
-        //may be better
+        //array with all food of cats
         food = [];
-        food[0] = 'images/food/burger2.png';
+        food[0] = 'images/food/burger.png';
         food[1] = "images/food/meat.png";
         food[2] = "images/food/pizza.png";
         food[3] = "images/food/cake.png";
@@ -67,9 +81,7 @@ game = {
             "cakeCat": [food[3]]
         };
 
-        score = 0;
-        countLife = $('.health div > img').length;
-        show = false;
+
     },
 
     start: function (timer) {
@@ -81,11 +93,12 @@ game = {
         clearTimeout(speed);
     },
 
+
     randomFood: function () {
         if (countLife > 0) {
             game.start(timeOut);
             numberImg = random(0, 6);
-            $('#image-food').html('<img src="' + food[numberImg] + ' ">').find("img").stop().fadeIn(200);
+            image_food.attr({"src" : food[numberImg]}).stop().fadeIn(200);
             if (score < 300) {
                 timeOut -= timeOutStep;
             }
@@ -118,12 +131,30 @@ game = {
         if (countLife == 0) {
             game.stop();
             numberImg = undefined;
-            $('#image-food').html('<h1>Game over</h1><br><img src="images/imgs/deadcat.png" id="dead-cat">');
+            image_food.hide();
+            $('#game-over').show();
             sad_melody.play();
         }
         else {
             crash_life.play();
         }
+    },
+
+    changeStatusGame: function () {
+        if (imgPause) {
+            playPause.attr({"src":"images/imgs/play.png"});
+            game.pause();
+            imgPause = false;
+        }
+        else {
+            playPause.attr({"src":"images/imgs/pause.png"});
+            imgPause = true;
+        }
+    },
+
+    pause: function () {
+        game.stop();
+        $('#image-food').html('<img src="' + "images/imgs/levelup.png" + ' ">').find("img").stop().fadeIn(200);
     }
 };
 
