@@ -28,7 +28,7 @@ $(function() {
 				return;
 			}	
 		}
-	}, 300);
+	}, 3000);
 });
 
 function changeCatImage() {
