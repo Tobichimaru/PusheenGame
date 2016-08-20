@@ -24,11 +24,7 @@ function KeyPressed(e) {
 	}
 	
 	if(unicode == 38){
-		 audioElement.play();
-	}
-	
-		if(unicode == 40){
-		 audioElement.pause();
+		 playMusic()
 	}
 
 	var allowedSpace = parseInt(document.getElementById("game_field").offsetWidth,
@@ -45,7 +41,7 @@ function KeyPressed(e) {
 		cat.className = "";
 	}
 
-	if (unicode == 39 && stepCount < 4) {
+	if (unicode == 39 && stepCount < 4 && stepCount >= 0) {
 		cat.style["left"] = position + step;
 		stepCount++;
 		cat.className = "flip_image";
@@ -133,10 +129,20 @@ function IsWounded(name) {
 			}
 			else{
 				lives--;
+				var audiominuslife = document.createElement('audio');
+				audiominuslife.setAttribute('src', 'audio/crash-health.mp3');
+				audiominuslife.play();
+				
 				if (lives == 0) {
-				if (!alert('Game over!')) {
-					window.location.reload();
-				}
+					var audiogameover = document.createElement('audio');
+					audiogameover.setAttribute('src', 'audio/meow.mp3');
+					$("#cat").attr("src","gameover.gif");
+					audioElement.pause();
+					audiogameover.play();
+					isPaused = true;
+					$("#game-over").append( "<p>GAME OVER!</p>");
+					$("img:not(#cat):not(.space-stuff)").remove();
+					stepCount = -1;
 			}
 				document.getElementById(lives+1).className = "hidden";
 			}

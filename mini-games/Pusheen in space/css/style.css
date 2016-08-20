@@ -15,7 +15,7 @@ body{
 }
 
 #info_panel {
-	width: 22%;
+	width: 23%;
 	margin: 0;
 	padding: 1%;
 	background-color: #191970;
@@ -89,10 +89,6 @@ ul {
 	display: inline;
 }
 
-.hidden {
-	visibility: hidden; 
-}
-
 .visible{
 	visibility: visible;
 }
@@ -122,20 +118,41 @@ ul li{
 	padding-left:40%;
 }
 
-.play, .pause{
-	
-}
-
 .play, .stop{
 	cursor: pointer;
+	float: left;
+	height:90px;
+	width:90px;
+}
+.play{
+	background: url(../img/musicoff.png);
+	background-repeat: no-repeat;
+}
+
+.stop{
+	background: url(../img/music.png);
+	background-repeat: no-repeat;
+}
+
+.hidden{
+	visibility:hidden;
 }
 
 .music{
-	float:left;
-	width:50%;
-	border: 1px solid gold
+	border: 1px solid gold;
+	margin-right:1%;
+	overflow:hidden;
 }
 
 .button-panel{
 	overflow:hidden;
 }
+
+#game-over{
+	margin: 20% 10% 0 10%;
+	text-align:center;
+	color:white;
+	font-size: 3.5em;
+	animation: blink 2s linear infinite;
+}
+

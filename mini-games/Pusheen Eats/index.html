@@ -6,10 +6,12 @@
 	 	<script type="text/javascript" src="js/definitions.js"></script>
 	 	<script type="text/javascript" src="js/game.js"></script>
 	 	<script type="text/javascript" src="js/start.js"></script>
+	</head>
 	<body class="before-game">
 		<div id="game">
 			<div id="game_field">
 				<div><p class="start-text">MOVE TO RIGHT TO START THE GAME</p></div>
+				<div id="game-over"></div>
 				<img id="cat" src="img/pusheen.gif"/>
 			</div>
 			<div id="info_panel">
@@ -23,41 +25,35 @@
 				<h2>YAMMY!</h2>
 				<ul>
 					<li>
-						<img src="img/apple.png"/>
+						<img class="yammy" src="img/apple.png"/>
 						<label>10</label>
 					</li>
 					<li>
-						<img src="img/cupcake.png"/>
+						<img class="yammy" src="img/cupcake.png"/>
 						<label>15</label>
 					</li>
 					<li>
-						<img src="img/doughnut.png"/>
+						<img class="yammy" src="img/doughnut.png"/>
 						<label>20</label>
 					</li>
 					<li>
-						<img src="img/meat.png"/>
+						<img class="yammy" src="img/meat.png"/>
 						<label>25</label>
 					</li>
 					<li>
-						<img src="img/pizza.png"/>
+						<img class="yammy" src="img/pizza.png"/>
 						<label>30</label>
 					</li>
 					<li>
-						<img src="img/like.png" width="40" height="40"/>
+						<img  class="yammy"src="img/like.png" width="40" height="40"/>
 						<label>+1 life</label>
 					</li>
 				</ul>
-				<div class="fir-trees"></div>
-<!-- 				<div class = "button-panel"> -->
+				<div class="button-panel">
 					<div class="music">
-						<img class="play" src="img/music.png" alt="play" title="play music"/>
-						<img class="stop" src="img/musicoff2.png" alt="turn off" title="turn off music" />
+						<div class="play" id="music"> </div>
 					</div>
-					<!-- <div class="music">
-						<img class="button" src="img/pause.png" onclick="pause()" alt="pause" title="pause game"/>
-						<img class="button" src="img/musicoff.png" onclick="unpause()" alt="unpause" title="unpause game" />
-					</div> -->
-<!-- 				</div> -->
+				</div>
 			</div>
 		</div>
 	</body>
