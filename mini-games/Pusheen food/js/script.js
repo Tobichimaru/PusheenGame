@@ -36,9 +36,9 @@ $(function() {
                 }
             }
             if (isContain) {
-                counter = $('#counter');
-                score = +counter.text() + 15;
-                counter.text(score);
+                var $score = $('#score');
+                score = +$score.text() + 15;
+                $score.text(score);
                 audio_good.play();
                 return true;
             }
@@ -130,6 +130,7 @@ game = {
 
         if (countLife == 0) {
             game.stop();
+            saveScore();
             numberImg = undefined;
             image_food.hide();
             $('#game-over').show();

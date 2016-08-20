@@ -93,6 +93,7 @@ function MoveItem(name) {
 			}
 
 			if (lives == 0) {
+				saveScore();
 				if (!alert('Game over!')) {
 					window.location.reload();
 				}

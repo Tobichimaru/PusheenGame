@@ -134,6 +134,7 @@ function IsWounded(name) {
 			else{
 				lives--;
 				if (lives == 0) {
+					saveScore();
 				if (!alert('Game over!')) {
 					window.location.reload();
 				}
