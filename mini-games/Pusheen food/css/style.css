@@ -27,7 +27,7 @@ body:before {
 }
 
 .picture {
-    width: 150px;
+    width: 170px;
     margin: 30px 30px 25px 30px;
     position: absolute;
     cursor: pointer;
@@ -74,13 +74,12 @@ img[id^=left] {
     top: 34%;
     left: 40%;
     text-align: center;
-    font-size: 19px;
+    font-size: 17px;
 }
 
-#image-food img {
+#image-food #food {
     display: none;
-    width: 180px;
-
+    width: 150px;
 }
 
 #image-food:before {
@@ -103,8 +102,8 @@ img[id^=left] {
 
 #dead-cat {
     display: initial !important;
-    margin-top: -35%;
-    width: 140px;
+    margin-top: -14%;
+    width: 110px;
 }
 
 #game-over {
@@ -120,6 +119,8 @@ img[id^=left] {
 .play-pause img{
     width:50px;
     height:50px;
+    cursor: pointer;
+    display: none;
 }
 
 @keyframes theme {
@@ -156,15 +157,25 @@ img[id^=left] {
     }
 }
 
-@media all and (min-width: 750px) {
+@media all and (max-width: 750px) {
     body {
         min-width: 450px;
         max-height:540px;
     }
 
     .picture {
-        min-width: 190px;
-        min-height:190px;
+       width: 120px;
     }
 
+    #image-food #food {
+        width: 120px;
+    }
+
+    #image-food{
+        font-size: 12px;
+    }
+
+    #dead-cat{
+        width: 80px;
+    }
 }
