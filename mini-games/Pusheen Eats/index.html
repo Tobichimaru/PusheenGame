@@ -2,44 +2,60 @@
 	<head>
 	 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	 	<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery-3.1.0.js"></script>
+		<script type="text/javascript" src="js/storage.js"></script>
 	 	<script type="text/javascript" src="js/definitions.js"></script>
 	 	<script type="text/javascript" src="js/game.js"></script>
 	 	<script type="text/javascript" src="js/start.js"></script>
-	<body>
+	 	<script type="text/javascript" src="js/score.js"></script>
+	</head>
+	<body class="before-game">
 		<div id="game">
 			<div id="game_field">
+				<div><p class="start-text">MOVE TO RIGHT TO START THE GAME</p></div>
+				<div id="game-over"></div>
 				<img id="cat" src="img/pusheen.gif"/>
 			</div>
 			<div id="info_panel">
-				<label>score:</label>
-				<p id="score">0</p>
+			
+				<div id="score">0</div>
 				<ul id="likes">
 					<li id="1"><img src="img/like.png"/></li>	
 					<li id="2"><img src="img/like.png"/></li>	
 					<li id="3"><img src="img/like.png"/></li>	
 				</ul>
+				<h2>YAMMY!</h2>
 				<ul>
 					<li>
-						<img src="img/apple.png"/>
+						<img class="yammy" src="img/apple.png"/>
 						<label>10</label>
 					</li>
 					<li>
-						<img src="img/cupcake.png"/>
+						<img class="yammy" src="img/cupcake.png"/>
 						<label>15</label>
 					</li>
 					<li>
-						<img src="img/doughnut.png"/>
+						<img class="yammy" src="img/doughnut.png"/>
 						<label>20</label>
 					</li>
 					<li>
-						<img src="img/meat.png"/>
+						<img class="yammy" src="img/meat.png"/>
 						<label>25</label>
 					</li>
 					<li>
-						<img src="img/pizza.png"/>
+						<img class="yammy" src="img/pizza.png"/>
 						<label>30</label>
 					</li>
+					<li>
+						<img  class="yammy"src="img/like.png" width="40" height="40"/>
+						<label>+1 life</label>
+					</li>
 				</ul>
+				<div class="button-panel">
+					<div class="music">
+						<div class="play" id="music"> </div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

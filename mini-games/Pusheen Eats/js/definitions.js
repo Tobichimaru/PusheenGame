@@ -10,7 +10,7 @@ var generateSpeeds = {
 	"img/doughnut.png": 5000,
 	"img/meat.png": 5250,
 	"img/pizza.png": 5500,
-	"img/like.png": 10000
+	"img/like.png": 15000
 };
 
 var moveSpeeds = {

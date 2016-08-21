@@ -1,8 +1,32 @@
 var stepCount = 0;
+var isPaused = true;
+var click = 0;
+
+function pause() {
+	isPaused = true;
+}
+
+function unpause() {
+	isPaused = false;
+}
 
 function KeyPressed(e) {
 	var unicode = e.keyCode ? e.keyCode : e.charCode;
 
+	if(unicode == 39){
+		click++;
+		if (click == 1) {
+			isPaused = false;
+			start();
+			$("body").removeClass("before-game");
+			$("p").remove();
+		}
+	}
+	
+	if(unicode == 38){
+		 playMusic()
+	}
+	
 	var allowedSpace = parseInt(document.getElementById("game_field").offsetWidth,
 		10) - parseInt(document.getElementById("cat").offsetWidth, 10);
 	var step = allowedSpace / 3;
@@ -17,7 +41,7 @@ function KeyPressed(e) {
 		cat.className = "";
 	}
 
-	if (unicode == 39 && stepCount < 3) {
+	if (unicode == 39 && stepCount < 3 && stepCount>=0) {
 		cat.style["left"] = position + step;
 		stepCount++;
 		cat.className = "flip_image";
@@ -25,9 +49,12 @@ function KeyPressed(e) {
 }
 
 function CreateItem(name) {
+		if(isPaused==true){
+		return;
+	}
 	var width = document.getElementById("game_field").offsetWidth;
 	var item = document.createElement("img");
-
+	
 	item.src = name;
 	item.style.position = "absolute";
 	item.style.top = 0;
@@ -41,6 +68,9 @@ function CreateItem(name) {
 }
 
 function MoveItem(name) {
+	if(isPaused){
+		return;
+	}
 	var length = food[name].length;
 	var heigth = document.getElementById("game_field").offsetHeight;
 
@@ -54,14 +84,27 @@ function MoveItem(name) {
 			document.getElementById("game_field").removeChild(food[name][i]);
 			food[name].splice(i, 1);
 			if(name!="img/like.png") {
+				var audiominuslife = document.createElement('audio');
+				audiominuslife.setAttribute('src', 'audio/crash-health.mp3');
 				document.getElementById(lives).className = "hidden";
 				lives--;
+				audiominuslife.play();
 			}
 
 			if (lives == 0) {
-				if (!alert('Game over!')) {
-					window.location.reload();
-				}
+				var audiogameover = document.createElement('audio');
+				audiogameover.setAttribute('src', 'audio/meow.mp3');
+				$("#cat").attr("src","gameover.gif");
+				audioElement.pause();
+				audiogameover.play();
+				isPaused = true;
+				$("#game-over").append( "<p>GAME OVER!</p>");
+				$("img:not(#cat):not(.yammy)").remove();
+				stepCount = -1;
+				saveScore();
+				// if (!alert('Game over!')) {
+					// window.location.reload();
+				// }
 			}
 		}
 	}

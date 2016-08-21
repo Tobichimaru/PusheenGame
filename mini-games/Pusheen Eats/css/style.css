@@ -11,6 +11,30 @@
 	background-color: #FFF0F5; 
 }
 
+.before-game {
+	opacity: 0.2;
+}
+
+.start-text {
+	opacity:1;
+	margin: 20% 10% 0 10%;
+	text-align:center;
+	color:#B22222;
+	font-size: 3.5em;
+	 animation: blink 2s linear infinite;
+}
+
+@-webkit-keyframes blink {
+  50% { color: #B22222 }
+  51% { color: #E9967A }
+  100% { color: #B22222 }
+}
+@keyframes blink {
+  50% { color: #B22222 }
+  51% { color: #E9967A }
+  100% { color: #B22222 }
+}
+
 #info_panel {
 	width: 28%;
 	margin: 0;
@@ -37,6 +61,11 @@
 	font-size: 3em;
 	text-align: center;
 	margin: 0 auto;
+	color: #B22222;
+}
+
+#score:before{
+	content:"SCORE: "
 }
 
 label {
@@ -50,8 +79,8 @@ ul {
 	display: inline;
 }
 
-.hidden {
-	visibility: hidden; 
+#likes{
+	margin-left: 13%;
 }
 
 .visible{
@@ -67,4 +96,56 @@ ul {
 	border-radius: 100%;
 	position: absolute;
 	z-index: 1;
+}
+
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.play, .stop{
+	cursor: pointer;
+	float: left;
+	height:90px;
+	width:90px;
+}
+.play{
+	background: url(../img/musicoff.png);
+	background-repeat: no-repeat;
+}
+
+.stop{
+	background: url(../img/music.png);
+	background-repeat: no-repeat;
+}
+
+.hidden{
+	visibility:hidden;
+}
+
+.music{
+	border: 1px solid gold;
+	margin-left:30%;
+	overflow:hidden;
+	width: 30%;
+}
+
+label, h2{
+	text-align:center;
+	color: #B22222;
+}
+
+h2{
+	font-size: 2em;
+}
+ul li{
+	display: inline;
+}
+
+#game-over{
+	margin: 20% 10% 0 10%;
+	text-align:center;
+	color:#B22222;
+	font-size: 3.5em;
+	animation: blink 2s linear infinite;
 }
