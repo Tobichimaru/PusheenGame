@@ -83,10 +83,6 @@ ul {
 	margin-left: 13%;
 }
 
-.hidden {
-	visibility: hidden; 
-}
-
 .visible{
 	visibility: visible;
 }
@@ -109,18 +105,31 @@ h1 {
 
 .play, .stop{
 	cursor: pointer;
+	float: left;
+	height:90px;
+	width:90px;
+}
+.play{
+	background: url(../img/musicoff.png);
+	background-repeat: no-repeat;
+}
+
+.stop{
+	background: url(../img/music.png);
+	background-repeat: no-repeat;
+}
+
+.hidden{
+	visibility:hidden;
 }
 
 .music{
-/* 	float:left; */
-	margin: 7% 25%;
-	width:50%;
-	border: 1px solid #B22222
+	border: 1px solid gold;
+	margin-left:30%;
+	overflow:hidden;
+	width: 30%;
 }
 
-.button-panel{
-	overflow:hidden;
-}
 label, h2{
 	text-align:center;
 	color: #B22222;
@@ -131,4 +140,12 @@ h2{
 }
 ul li{
 	display: inline;
+}
+
+#game-over{
+	margin: 20% 10% 0 10%;
+	text-align:center;
+	color:#B22222;
+	font-size: 3.5em;
+	animation: blink 2s linear infinite;
 }

@@ -1,17 +1,3 @@
-/*
- * localStorage for Internet Explorer 6,7 - v0.2.0
- *
- * Copyright 2012, Dmitriy Pakhtinov ( spb.piksel@gmail.com )
- *
- * http://spb-piksel.ru/
- *
- * Dual licensed under the MIT and GPL licenses:
- *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html
- *
- * Update: 12-07-2012
- */
-
 (function( window, undefined ){
 
 	var

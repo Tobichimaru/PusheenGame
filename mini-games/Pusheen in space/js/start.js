@@ -2,7 +2,9 @@ window.onload = start;
 document.addEventListener("keydown", KeyPressed, false);
 
  var audioElement = document.createElement('audio');
- audioElement.setAttribute('src', 'mr-sandman.mp3');
+ audioElement.setAttribute('src', 'audio/backgroundsong.mp3');
+ audioElement.setAttribute('loop', 'loop');
+ var isNeverClicked = 0;
 
 $(document).ready(function() {
         $.get();
@@ -10,17 +12,23 @@ $(document).ready(function() {
         audioElement.addEventListener("load", function() {
             audioElement.play();
         }, true);
-
-        $('.play').click(function() {
-            audioElement.play();
-        });
-		
-        $('.stop').click(function() {
-            audioElement.pause();
-        });
-		
+        $('.play').click(playMusic);		
     });
 
+function playMusic() {
+	isNeverClicked++;
+	if(isNeverClicked %2 != 0){
+		audioElement.play();
+		$( "#music").removeClass("play");
+		$("#music").addClass("stop");
+	}
+	else{
+		audioElement.pause();
+		$( "#music").removeClass("stop");
+		$( "#music").addClass("play");
+	}
+}
+	
 function start() {
 	if(isPaused==false){
 		NewLevel();

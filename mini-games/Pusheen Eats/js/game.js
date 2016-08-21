@@ -24,11 +24,7 @@ function KeyPressed(e) {
 	}
 	
 	if(unicode == 38){
-		 audioElement.play();
-	}
-	
-	if(unicode == 40){
-		 audioElement.pause();
+		 playMusic()
 	}
 	
 	var allowedSpace = parseInt(document.getElementById("game_field").offsetWidth,
@@ -45,7 +41,7 @@ function KeyPressed(e) {
 		cat.className = "";
 	}
 
-	if (unicode == 39 && stepCount < 3) {
+	if (unicode == 39 && stepCount < 3 && stepCount>=0) {
 		cat.style["left"] = position + step;
 		stepCount++;
 		cat.className = "flip_image";
@@ -58,7 +54,7 @@ function CreateItem(name) {
 	}
 	var width = document.getElementById("game_field").offsetWidth;
 	var item = document.createElement("img");
-
+	
 	item.src = name;
 	item.style.position = "absolute";
 	item.style.top = 0;
@@ -88,15 +84,27 @@ function MoveItem(name) {
 			document.getElementById("game_field").removeChild(food[name][i]);
 			food[name].splice(i, 1);
 			if(name!="img/like.png") {
+				var audiominuslife = document.createElement('audio');
+				audiominuslife.setAttribute('src', 'audio/crash-health.mp3');
 				document.getElementById(lives).className = "hidden";
 				lives--;
+				audiominuslife.play();
 			}
 
 			if (lives == 0) {
+				var audiogameover = document.createElement('audio');
+				audiogameover.setAttribute('src', 'audio/meow.mp3');
+				$("#cat").attr("src","gameover.gif");
+				audioElement.pause();
+				audiogameover.play();
+				isPaused = true;
+				$("#game-over").append( "<p>GAME OVER!</p>");
+				$("img:not(#cat):not(.yammy)").remove();
+				stepCount = -1;
 				saveScore();
-				if (!alert('Game over!')) {
-					window.location.reload();
-				}
+				// if (!alert('Game over!')) {
+					// window.location.reload();
+				// }
 			}
 		}
 	}
