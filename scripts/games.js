@@ -30,6 +30,9 @@ $(function () {
                 $(".now-progress").text($progress);
                 $(".cat-img").show();
                 $(".level-progress").show();
+                //change money balance
+                var $money = $(".totalMoney");
+                $money.text(+$money.text() + (+localStorage.getItem('score')));
             }
         });
     };
@@ -44,10 +47,15 @@ $(function () {
         changeBackground();
         window.open("mini-games/Pusheen in space/index.html");
         hideCat();
-        //window.location.href = "mini-games/Pusheen in space/index.html"; // open in the same tab
     };
 
+    function foodGame () {
+        changeBackground();
+        window.open("mini-games/Pusheen food/index.html");
+        hideCat();
+    };
 
+    $(".food-game").on("click", foodGame);
     $(".catch-food").on("click", catchGame);
     $(".some-game").on("click", someGame);
 });

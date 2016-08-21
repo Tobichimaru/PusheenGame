@@ -143,6 +143,7 @@ function IsWounded(name) {
 					$("#game-over").append( "<p>GAME OVER!</p>");
 					$("img:not(#cat):not(.space-stuff)").remove();
 					stepCount = -1;
+					saveScore();
 			}
 				document.getElementById(lives+1).className = "hidden";
 			}

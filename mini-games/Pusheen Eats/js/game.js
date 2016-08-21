@@ -101,6 +101,10 @@ function MoveItem(name) {
 				$("#game-over").append( "<p>GAME OVER!</p>");
 				$("img:not(#cat):not(.yammy)").remove();
 				stepCount = -1;
+				saveScore();
+				// if (!alert('Game over!')) {
+					// window.location.reload();
+				// }
 			}
 		}
 	}
