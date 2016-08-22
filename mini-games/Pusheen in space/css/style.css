@@ -140,8 +140,9 @@ ul li{
 
 .music{
 	border: 1px solid gold;
-	margin-right:1%;
+	margin-left:30%;
 	overflow:hidden;
+	width: 30%;
 }
 
 .button-panel{
