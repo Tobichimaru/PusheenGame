@@ -94,7 +94,7 @@ function MoveItem(name) {
 			if (lives == 0) {
 				var audiogameover = document.createElement('audio');
 				audiogameover.setAttribute('src', 'sounds/meow.mp3');
-				$("#cat").attr("src","gameover.gif");
+				$("#cat").attr("src","images/gameover.gif");
 				audioElement.pause();
 				audiogameover.play();
 				isPaused = true;
