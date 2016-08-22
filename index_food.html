@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pusheen choose food</title>
+    <link rel="stylesheet" href="css/style_food.css">
+
+    <script type="text/javascript" src="scripts/libs/jquery-3.1.0.js" ></script>
+    <script type="text/javascript" src="scripts/libs/storage.js" ></script>\
+
+    <script type="text/javascript" src="scripts/js_food/script.js"></script>
+
+    <script type="text/javascript" src="scripts/core/score.js"></script>
+</head>
+<body>
+
+<div class="main">
+        <img id="left-top-img" class="picture" src="images/images_food/imgs/burger_pusheen.png" alt="burgerCat">
+        <img id="right-top-img" class="picture right-picture " src="images/images_food/imgs/cake.png" alt="cakeCat">
+        <img id="right-bottom-img" class="picture" src="images/images_food/imgs/meat_pusheen.png" alt="meatCat">
+        <img id="left-bottom-img" class="picture" src="images/images_food/imgs/pizza_pusheen.png" alt="pizzaCat">
+
+    <div class="health">
+        <div>
+            <img id="imgLife" src="images/images_food/imgs/like.png" />
+            <img id="imgLife" src="images/images_food/imgs/like.png" />
+            <img id="imgLife" src="images/images_food/imgs/like.png" />
+        </div>
+
+        <p class="score-text">Score: <span id="score">0</span></p>
+    </div>
+
+
+    <div id="image-food">
+        <p>Game starts in <span id="seconds">3</span></p>
+        <img id="food"/>
+        <span id="game-over">
+            <h1>Game over</h1><br><img src="images/images_food/imgs/deadcat.png" id="dead-cat"/>
+        </span>
+    </div>
+
+        <div class="play-pause">
+            <img src="images/images_food/imgs/pause.png"/>
+        </div>
+
+    </div>
+</body>
+</html>

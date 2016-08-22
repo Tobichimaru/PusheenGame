@@ -39,19 +39,19 @@ $(function () {
 
     function catchGame () {
         changeBackground();
-        window.open("mini-games/Pusheen Eats/index.html"); 
+        window.open("index_eat.html"); 
         hideCat();
     };
 
     function someGame () {
         changeBackground();
-        window.open("mini-games/Pusheen in space/index.html");
+        window.open("index_space.html");
         hideCat();
     };
 
     function foodGame () {
         changeBackground();
-        window.open("mini-games/Pusheen food/index.html");
+        window.open("index_food.html");
         hideCat();
     };
 

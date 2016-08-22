@@ -84,7 +84,7 @@ p,h3 {
 }
 
 .circle-img{
-	background: url('../design/img/icons.png');
+	background: url('../images/icons.png');
 	background-position:-8px -132px;
 	width:64px;
 	height:64px;
@@ -131,7 +131,7 @@ p,h3 {
 	margin:auto;
 	width: 80%;
 	height: 80%;
-	background-image: url(img/pusheen.gif);
+	background-image: url(../images/pusheen.gif);
 	background-size: 40%;
 	background-repeat: no-repeat;
     background-position: center; 
@@ -142,7 +142,7 @@ p,h3 {
 }
 
 .money-img {
-	background:url('../design/img/icons.png');
+	background:url('../images/icons.png');
 	background-repeat:no-repeat;
 	background-position:-71px -5px;
 	width:60px;
@@ -208,26 +208,26 @@ p.calories:before {
 }
 
 .meat-img{
-	background: url('../design/img/icons.png');
+	background: url('../images/icons.png');
 	background-position:-8px -204px;
 }
 
 .pizza-img{
-	background: url('../design/img/icons.png');
+	background: url('../images/icons.png');
 	background-position:-6px -284px;
 }
 	
 .hamburguer-img{
-	background: url('../design/img/icons.png');
+	background: url('../images/icons.png');
 	background-position:-8px -132px;
 }	
 
 .donut-img{
-	background: url('../design/img/icons.png');
+	background: url('../images/icons.png');
 	background-position:-8px -70px;
 }
 
 .cupcake-img{
-	background: url('../design/img/icons.png');
+	background: url('../images/icons.png');
 }
 

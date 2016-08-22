@@ -7,7 +7,7 @@ $(function () {
 
 		if (+$money >= +$price) {
 			$(".money p").text(+$money-(+$price));
-			$(".cat-img").css("background-image", "url(design/img/eat-" + 
+			$(".cat-img").css("background-image", "url(images/eat-" + 
 				event.data.food + ".gif)");
 			setTimeout(function () {
 				changeCatImage();	
@@ -16,7 +16,7 @@ $(function () {
 			progress($calories);
 		}
 		else {
-			$('.cat-img').css("background-image", "url(design/img/sadness.gif)");  
+			$('.cat-img').css("background-image", "url(images/sadness.gif)");  
 			setTimeout(function () {
 				changeCatImage();				
 			}, 2000);

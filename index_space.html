@@ -1,0 +1,60 @@
+<html>
+	<head>
+	 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	 	<link href="css/style_space.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript" src="scripts/libs/jquery-3.1.0.js" ></script>
+    	<script type="text/javascript" src="scripts/libs/storage.js" ></script>
+
+	 	<script type="text/javascript" src="scripts/js_space/definitions.js"></script>
+	 	<script type="text/javascript" src="scripts/js_space/game.js"></script>
+	 	<script type="text/javascript" src="scripts/js_space/start.js"></script>
+
+	 	<script type="text/javascript" src="scripts/core/score.js"></script>
+	<body  class="before-game">
+	
+		<div id="game">
+			<div id="game_field">
+				<div><p class="start-text">MOVE TO RIGHT TO START THE GAME</p></div>
+				<div id="game-over"></div>
+				<img id="cat" src="images/img_space/push.gif"/>
+			</div>
+			
+			<div id="info_panel">
+			<h1>SPACE CAT!</h1>
+			<div class = "button-panel">
+				<div class="music">
+					<div class="play" id="music"> </div>
+				</div>
+			</div>
+				<div id="score">0</div>
+				<ul id="likes">
+					<li id="1"><img src="images/img_space/like.png"/></li>	
+					<li id="2"><img src="images/img_space/like.png"/></li>	
+					<li id="3"><img src="images/img_space/like.png"/></li>				
+				</ul>
+				<h2>beware of these things!</h2>
+				<ul>
+					<li>
+						<img class = "space-stuff" src="images/img_space/meteor.png" width="50" height="50"/>
+					</li>
+					<li>
+						<img class = "space-stuff" src="images/img_space/comet.png" width="50" height="50"/>
+					</li>
+					<li>
+						<img class = "space-stuff" src="images/img_space/asteroid.png" width="50" height="50"/>
+					</li>
+					<li>
+						<img class = "space-stuff" src="images/img_space/spaceship.png" width="50" height="50"/>
+					</li>
+					</ul>
+					<div>
+					<h2>catch for additional life:</h2>
+						<img  src="images/img_space/like.png" width="40" height="40" class="info-life space-stuff"/>
+					</div>
+				
+			</div>
+			
+		</div>
+	</body>
+</html>
