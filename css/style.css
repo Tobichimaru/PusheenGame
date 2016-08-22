@@ -231,33 +231,3 @@ p.calories:before {
 	background: url('../design/img/icons.png');
 }
 
-.game-menu .button {
-    width: 132px;
-    height: 27px;
-    float: left;
-}
-
-.game-menu .load {
-	margin: 10px 0 0 120px;
-}
-
-.game-menu .save {
-    margin: 30px 0 0 120px;
-}
-
-.game-menu p {
-    margin: 0px;
-    font-weight: bold;
-    padding: 5px 0 0 0;
-    cursor: pointer;
-}
-
-.right-bar .semicircle {
-    height: 130px;
-    background: #ffffa7;
-    border: #472e15 solid 3px;
-    border-radius: 80px 0 0 80px;
-    margin: -100px 0 0 239px;
-    position: relative;
-}
-
