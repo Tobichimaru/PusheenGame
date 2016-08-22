@@ -25,7 +25,7 @@ $(function() {
 
             //add points if user selects cat correctly
             if (isContain) {
-                counter = $('#counter');
+                counter = $('#score');
                 score = +counter.text() + 15;
                 counter.text(score);
                 audio_good.play();
@@ -121,6 +121,7 @@ game = {
 
         if (countLife == 0) {
             game.stop();
+            saveScore();
             numberImg = undefined;
             playPause.attr({"src":"images/imgs/reload.png"}).attr('onclick', 'location.reload();');
             image_food.hide();
