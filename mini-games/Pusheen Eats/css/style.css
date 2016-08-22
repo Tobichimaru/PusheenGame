@@ -124,8 +124,8 @@ h1 {
 }
 
 .music{
-	border: 1px solid gold;
-	margin-left:30%;
+	border: 1px solid white;
+	margin-left:35%;
 	overflow:hidden;
 	width: 30%;
 }
@@ -148,4 +148,18 @@ ul li{
 	color:#B22222;
 	font-size: 3.5em;
 	animation: blink 2s linear infinite;
+}
+
+label{
+	margin-right:3%;
+}
+
+.food-panel{
+	border: 1px solid white;
+	width: 70%;
+	margin-left: 15%;
+}
+
+label{
+	font-size: 1.5em;
 }
