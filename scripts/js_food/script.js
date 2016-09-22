@@ -9,7 +9,7 @@ $(function() {
 
     $('.picture').click(function() {
         if(!game.checkClicked()) {
-            var audio_good = new Audio('sounds/good.mp3');
+            var audio_good = new Audio('sounds/good_food.mp3');
             var isContain = false;
             var $this = $(this);
 
@@ -113,7 +113,7 @@ game = {
 
     // remove life
     lostLife: function () {
-        var sad_melody = new Audio('sounds/kitten-meow.mp3');
+        var sad_melody = new Audio('sounds/meow.mp3');
         var crash_life = new Audio('sounds/crash-health.mp3');
 
         $('.health img:last').remove();
